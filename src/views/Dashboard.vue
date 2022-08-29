@@ -23,10 +23,11 @@ export default {
     }
   },
   created () {
-    axios.get('//localhost:3000/dashboard').then(({ data }) => {
-      this.events = data.events.events
-      this.isLoading = false
-    })
+    axios.get('//localhost:3000/dashboard')
+        .then(({ data }) => {
+          this.events = data.events.events
+          this.isLoading = false
+        })
   }
 }
 </script>
